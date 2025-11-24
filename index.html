@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αγροτικά Εφόδια Σαπουντζής - Επικοινωνία</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-agro {
+            background-color: #2e7d32;
+        }
+        .text-agro {
+            color: #388e3c;
+        }
+        .btn-agro {
+            background-color: #4caf50;
+            color: white;
+        }
+        .btn-agro:hover {
+            background-color: #45a049;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3') center/cover;
+            color: white;
+            padding: 100px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .contact-card {
+            border-left: 4px solid #4caf50;
+            transition: transform 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .history-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-agro navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-tractor me-2"></i>
+                ΑΓΡΟΤΙΚΑ ΕΦΟΔΙΑ
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Αγροτικά Εφόδια Σαπουντζής</h1>
+            <p class="lead fs-4">Ποιότητα & Αξιοπιστία στον Αγροτικό Τομέα</p>
+            <div class="mt-4">
+                <span class="badge bg-success fs-6 me-2">🌱 Φυτά</span>
+                <span class="badge bg-success fs-6 me-2">🍎 Σπόροι</span>
+                <span class="badge bg-success fs-6">🛠️ Εξοπλισμός</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ιστορικό Επιχείρησης -->
+    <section class="history-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-history fa-2x text-agro mb-3"></i>
+                        <h3 class="text-agro">Ιστορία Εμπιστοσύνης</h3>
+                    </div>
+                    <p class="lead fs-5">
+                        Η επιχείρησή μας δραστηριοποιείται από το 1996 στον χώρο των αγροτικών εφοδίων, 
+                        προσφέροντας ποιοτικά προϊόντα και αξιόπιστες υπηρεσίες στους αγρότες της περιοχής.
+                    </p>
+                    <p class="text-muted mt-3">
+                        Με πάνω από 25 χρόνια εμπειρίας, συνεχίζουμε να στηρίζουμε τον αγροτικό τομέα 
+                        με εξειδικευμένα αγροτικά είδη και συμβουλές.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center mb-5">
+                    <h2 class="text-agro fw-bold"><i class="fas fa-phone-alt me-2"></i>Επικοινωνία</h2>
+                    <p class="text-muted">Είμαστε στη διάθεσή σας για οποιαδήποτε πληροφορία</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Τηλέφωνο -->
+                    <div class="col-md-4">
+                        <div class="card contact-card h-100 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-mobile-alt fa-3x text-agro mb-3"></i>
+                                <h5 class="card-title">Τηλέφωνο</h5>
+                                <p class="card-text fs-5 fw-bold">238 102 1051</p>
+                                <div class="d-grid gap-2">
+                                    <a href="tel:2381021051" class="btn btn-agro">
+                                        <i class="fas fa-phone me-1"></i>Κλήση Τώρα
+                                    </a>
+                                    <button onclick="copyPhone()" class="btn btn-outline-agro">
+                                        <i class="fas fa-copy me-1"></i>Αντιγραφή
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-4">
+                        <div class="card contact-card h-100 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-envelope fa-3x text-agro mb-3"></i>
+                                <h5 class="card-title">Email</h5>
+                                <p class="card-text">antsap96@gmail.com</p>
+                                <div class="d-grid gap-2">
+                                    <a href="mailto:antsap96@gmail.com?subject=Ερώτηση&body=Γεια σας, θα ήθελα πληροφορίες για..." 
+                                       class="btn btn-agro">
+                                        <i class="fas fa-envelope me-1"></i>Στείλε Email
+                                    </a>
+                                    <button onclick="copyEmail()" class="btn btn-outline-agro">
+                                        <i class="fas fa-copy me-1"></i>Αντιγραφή
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ωράριο -->
+                    <div class="col-md-4">
+                        <div class="card contact-card h-100 shadow-sm">
+                            <div class="card-body p-4">
+                                <i class="fas fa-clock fa-3x text-agro mb-3 d-block text-center"></i>
+                                <h5 class="card-title text-center">Ωράριο Λειτουργίας</h5>
+                                <div class="text-start small">
+                                    <p class="mb-1"><strong>Δευτέρα, Τετάρτη, Σάββατο:</strong></p>
+                                    <p class="mb-2">08:00 - 14:30</p>
+                                    
+                                    <p class="mb-1"><strong>Τρίτη, Πέμπτη, Παρασκευή:</strong></p>
+                                    <p class="mb-2">08:00 - 14:30</p>
+                                    <p class="mb-2 ps-3">17:30 - 20:00</p>
+                                    
+                                    <p class="mb-1"><strong>Κυριακή & Αργίες:</strong></p>
+                                    <p class="mb-0 text-danger">Κλειστά</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Χάρτης -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="text-agro text-center mb-3">
+                            <i class="fas fa-map-marked-alt me-2"></i>Βρείτε μας στον χάρτη
+                        </h5>
+                        <p class="text-center text-muted mb-3">
+                            Κολοκοτρώνη 10, Έδεσσα, 58200
+                        </p>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.71543495316!2d22.047215276337044!3d40.62353807139915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14fe945c17c7c997%3A0x8e9dbfbce5c5d741!2sKolokotroni%2010%2C%20Edessa%20582%2000!5e0!3m2!1sen!2sgr!4v1700000000000!5m2!1sen!2sgr" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="https://maps.google.com/?q=Κολοκοτρώνη 10, Έδεσσα, 58200" 
+                               target="_blank" class="btn btn-agro btn-sm">
+                                <i class="fas fa-external-link-alt me-1"></i>Άνοιγμα στο Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Αγροτικά Εφόδια Σαπουντζής. Με αγάπη για τη γεωπονία από το 1996.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Αντιγραφή τηλεφώνου
+        function copyPhone() {
+            navigator.clipboard.writeText("2381021051").then(function() {
+                alert("Το τηλέφωνο αντιγράφηκε!");
+            });
+        }
+
+        // Αντιγραφή email
+        function copyEmail() {
+            navigator.clipboard.writeText("antsap96@gmail.com").then(function() {
+                alert("Το email αντιγράφηκε!");
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
